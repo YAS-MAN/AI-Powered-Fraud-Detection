@@ -7,7 +7,7 @@
 
 Sistem cerdas untuk mendeteksi potensi kecurangan (*fraud*) pada klaim asuransi kesehatan. Aplikasi ini menggunakan arsitektur **Hybrid (Polyglot)** yang menggabungkan kemudahan antarmuka **PHP** dengan kekuatan komputasi **Python**.
 
-> **Project ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Web & Basis Data Lanjut.**
+> **Project ini dibuat untuk memenuhi tugas mata kuliah Kecerdasan Buatan & Basis Data Lanjut.**
 
 ## 🌐 Live Demo
 Coba aplikasi langsung di sini:
