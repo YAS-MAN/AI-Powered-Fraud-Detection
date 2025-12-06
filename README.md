@@ -1,9 +1,6 @@
-# AI-Powered-Fraud-Detection
-Website ini adalah sebuah website yang dapat mendeteksi atau memprediksi tingkat kebohongan dari suatu klaim. klaim yang ada disini adalah klaim asuransi, untuk saat ini difokuskan ke asuransi kesehatan.
-
 # 🛡️ AI-Powered Insurance Fraud Detection System
 
-![Project Status](https://img.shields.io/badge/status-active-success)
+![Project Status](https://img.shields.io/badge/status-live-success)
 ![PHP](https://img.shields.io/badge/PHP-8.0%2B-777BB4)
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB)
 ![MySQL](https://img.shields.io/badge/MySQL-Advanced-4479A1)
@@ -11,6 +8,10 @@ Website ini adalah sebuah website yang dapat mendeteksi atau memprediksi tingkat
 Sistem cerdas untuk mendeteksi potensi kecurangan (*fraud*) pada klaim asuransi kesehatan. Aplikasi ini menggunakan arsitektur **Hybrid (Polyglot)** yang menggabungkan kemudahan antarmuka **PHP** dengan kekuatan komputasi **Python**.
 
 > **Project ini dibuat untuk memenuhi tugas mata kuliah Pemrograman Web & Basis Data Lanjut.**
+
+## 🌐 Live Demo
+Coba aplikasi langsung di sini:
+👉 **[https://datolitic-uncontributive-piper.ngrok-free.dev/fraud_detect/](https://datolitic-uncontributive-piper.ngrok-free.dev/fraud_detect/)**
 
 ## 📸 Tampilan Aplikasi
 
@@ -22,7 +23,7 @@ Sistem cerdas untuk mendeteksi potensi kecurangan (*fraud*) pada klaim asuransi 
 |:----------------------:|
 | ![Dashboard](screenshots/dashboard.jpg) |
 
-*(Pastikan kamu mengupload gambar ke folder screenshots/ agar gambar di atas muncul)*
+*(Catatan: Gambar di atas adalah preview dari folder screenshots/)*
 
 ## ✨ Fitur Utama
 
@@ -32,15 +33,15 @@ Sistem cerdas untuk mendeteksi potensi kecurangan (*fraud*) pada klaim asuransi 
 
 ### 🔍 2. Algoritma Deteksi (Fraud Engine)
 Sistem menilai risiko berdasarkan parameter berikut:
-* **Bayesian Probability:** Menghitung peluang fraud berdasarkan data historis.
+* **Hybrid Bayesian Probability:** Menggabungkan statistik medis baku (70%) dan tren data lapangan (30%) agar adaptif namun tetap akurat.
 * **Anomaly Detection:** Mendeteksi klaim biaya yang jauh di atas rata-rata (`Min/Max Cost` threshold).
 * **Hospital Risk Score:** Memberikan bendera merah pada Rumah Sakit dengan riwayat fraud tinggi.
 * **CBR (Case-Based Reasoning):** Mencocokkan klaim baru dengan modus operandi kasus fraud masa lalu.
 
 ### 🛠️ 3. Fitur Database Lanjut (MySQL)
-Project ini tidak hanya tabel biasa, tetapi menerapkan:
+Project ini menerapkan objek database tingkat lanjut:
 * ✅ **Stored Procedures:** `sp_update_claim` untuk keamanan update data.
-* ✅ **Triggers:** `tr_before_delete_claim` untuk audit trail (backup data sebelum dihapus).
+* ✅ **Triggers:** `tr_before_delete_claim` untuk audit trail (backup data otomatis sebelum dihapus).
 * ✅ **Views:** `v_claim_report` untuk penyajian laporan yang efisien.
 * ✅ **Functions:** `f_get_risk_label` untuk penentuan label kategori (SAFE/SUSPICIOUS/HIGH RISK) di level database.
 
@@ -84,3 +85,13 @@ Project ini tidak hanya tabel biasa, tetapi menerapkan:
     * Buka browser dan akses: `http://localhost/insurance-fraud-detection/index.php`
 
 ## 📂 Struktur Folder
+/insurance-fraud-detection │ ├── 📄 index.php # Halaman Input Utama ├── 📄 process.php # Logic PHP memanggil Python & Save DB ├── 📄 history.php # Admin Dashboard (View & Search) ├── 📄 edit.php # Form Edit Data ├── 📄 koneksi.php # Koneksi DB PHP │ ├── 🐍 fraud_cli.py # Script Python (Interface untuk PHP) ├── 🐍 fraud_engine.py # Logika Algoritma Fraud (Bayesian Hybrid) ├── 🐍 database.py # Koneksi DB Python │ ├── 🎨 style.css # Styling CSS Responsif ├── 📂 screenshots/ # Gambar untuk README └── 🗄️ database.sql # File Backup Database
+
+## 👨‍💻 Tech Stack
+* **Backend:** PHP Native (Logic & CRUD), Python (AI Calculation).
+* **Frontend:** HTML5, CSS3 (Custom & Responsive), Bootstrap 5, JavaScript.
+* **Database:** MySQL (MariaDB).
+* **Environment:** Windows (Laragon/XAMPP).
+
+## 📄 Lisensi
+Project ini dibuat untuk tujuan pendidikan dan penelitian akademik.
