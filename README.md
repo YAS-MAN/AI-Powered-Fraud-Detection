@@ -85,7 +85,24 @@ Project ini menerapkan objek database tingkat lanjut:
     * Buka browser dan akses: `http://localhost/insurance-fraud-detection/index.php`
 
 ## 📂 Struktur Folder
-/insurance-fraud-detection │ ├── 📄 index.php # Halaman Input Utama ├── 📄 process.php # Logic PHP memanggil Python & Save DB ├── 📄 history.php # Admin Dashboard (View & Search) ├── 📄 edit.php # Form Edit Data ├── 📄 koneksi.php # Koneksi DB PHP │ ├── 🐍 fraud_cli.py # Script Python (Interface untuk PHP) ├── 🐍 fraud_engine.py # Logika Algoritma Fraud (Bayesian Hybrid) ├── 🐍 database.py # Koneksi DB Python │ ├── 🎨 style.css # Styling CSS Responsif ├── 📂 screenshots/ # Gambar untuk README └── 🗄️ database.sql # File Backup Database
+
+```text
+/insurance-fraud-detection
+│
+├── 📄 index.php          # Halaman Input Utama
+├── 📄 process.php        # Logic PHP memanggil Python & Save DB
+├── 📄 history.php        # Admin Dashboard (View & Search)
+├── 📄 edit.php           # Form Edit Data
+├── 📄 koneksi.php        # Koneksi DB PHP
+│
+├── 🐍 fraud_cli.py       # Script Python (Interface untuk PHP)
+├── 🐍 fraud_engine.py    # Logika Algoritma Fraud (Bayesian Hybrid)
+├── 🐍 database.py        # Koneksi DB Python
+│
+├── 🎨 style.css          # Styling CSS Responsif
+├── 📂 screenshots/       # Gambar untuk README
+└── 🗄️ database.sql       # File Backup Database
+
 
 ## 👨‍💻 Tech Stack
 * **Backend:** PHP Native (Logic & CRUD), Python (AI Calculation).
