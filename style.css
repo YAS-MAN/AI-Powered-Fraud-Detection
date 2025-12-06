@@ -1,0 +1,237 @@
+body {
+  background: linear-gradient(135deg, #e8f2ff 0%, #dfe7fb 40%, #f4e7c6 100%);
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+}
+
+/* ========================================================= */
+/* HERO SECTION */
+/* ========================================================= */
+
+.hero-container {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1.2;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #2f4a9e;
+}
+
+.hero-sub {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #4b4b9d;
+}
+
+.btn-get {
+  margin-top: 25px;
+  padding: 12px 32px;
+  border-radius: 40px;
+  background: #4b4b9d;
+  color: white;
+  border: none;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.btn-get:hover {
+  background: #2f3a8a;
+}
+
+.ambulance-img {
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero-caption {
+  color: #2f4a9e;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* ========================================================= */
+/* ANALYTICS CARD */
+/* ========================================================= */
+
+.analytics-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.stat {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2f4a9e;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #4b4b9d;
+}
+
+/* ========================================================= */
+/* FORM CARD */
+/* ========================================================= */
+
+.form-card {
+  background: white;
+  padding: 35px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+  color: #2f4a9e;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* ========================================================= */
+/* AUTOCOMPLETE */
+/* ========================================================= */
+
+#suggestBox {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+}
+
+.suggest-item {
+  padding: 6px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+.suggest-item:hover {
+  background: #eaeaea;
+}
+/* --- Poin 11: Mengurangi spasi kosong di hero section --- */
+.hero-container {
+    display: flex;
+    padding: 30px 20px; /* Dikurangi dari 50px */
+    gap: 30px;
+    align-items: flex-start; /* Supaya tidak stretch ke bawah */
+    min-height: 80vh; /* Agar tidak terlalu panjang ke bawah */
+}
+
+/* --- Poin 8: Default Landscape saat Print --- */
+@media print {
+    @page {
+        size: landscape;
+        margin: 1cm;
+    }
+    body {
+        -webkit-print-color-adjust: exact;
+        background: white; /* Hemat tinta */
+    }
+    .no-print {
+        display: none !important;
+    }
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}/* Update Hero Section agar Full Screen & Tengah Sempurna */
+.hero-container {
+    min-height: 100vh; /* Memaksa tinggi minimal setinggi layar device */
+    display: flex;
+    align-items: center; /* Mengatur posisi vertikal ke tengah */
+    justify-content: center; /* Mengatur posisi horizontal ke tengah */
+    padding: 20px; 
+    gap: 40px;
+}
+
+/* Pastikan body tidak ada margin bawaan */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Class Baru untuk Estimasi Satu Baris */
+.est-text {
+    font-size: 11px; /* Ukuran font diperkecil */
+    white-space: nowrap; /* Memaksa teks tidak turun baris */
+    overflow: hidden; /* Jaga-jaga jika terlalu panjang */
+    text-overflow: ellipsis;
+    display: block;
+    margin-top: 4px;
+    font-weight: 500;
+}
+/* ========================================================= */
+/* MOBILE RESPONSIVE (HP & TABLET)                           */
+/* ========================================================= */
+
+@media (max-width: 991px) {
+    /* 1. Ubah susunan dari Kiri-Kanan menjadi Atas-Bawah */
+    .hero-container {
+        flex-direction: column; /* Stack vertikal */
+        height: auto; /* Biarkan tinggi menyesuaikan isi (bisa discroll) */
+        min-height: 100vh;
+        padding: 40px 20px; /* Beri jarak yang nyaman */
+        justify-content: flex-start; /* Mulai dari atas */
+    }
+
+    /* 2. Atur lebar elemen menjadi full 100% */
+    .hero-left, .hero-right {
+        flex: none;
+        width: 100%;
+        text-align: center; /* Teks jadi rata tengah biar rapi di HP */
+    }
+
+    /* 3. Penyesuaian Judul di HP biar gak kegedean */
+    .hero-title {
+        font-size: 36px; /* Perkecil font judul */
+        margin-bottom: 15px;
+    }
+
+    .hero-sub {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    /* 4. Penyesuaian Form Card di HP */
+    .form-card {
+        padding: 25px; /* Kurangi padding biar muat di layar kecil */
+        margin-top: 10px;
+    }
+
+    /* 5. Tombol Dashboard biar full width di HP */
+    .btn-dark {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* 6. Atur ulang Input Group biar rapi vertikal */
+    .row {
+        --bs-gutter-x: 1rem;
+    }
+    
+    /* Input estimasi biar ga berantakan di layar sempit */
+    .est-text {
+        white-space: normal; /* Izinkan turun baris kalau layar terlalu sempit */
+        font-size: 10px;
+    }
+}
