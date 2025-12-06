@@ -102,7 +102,7 @@ Project ini menerapkan objek database tingkat lanjut:
 ├── 🎨 style.css          # Styling CSS Responsif
 ├── 📂 screenshots/       # Gambar untuk README
 └── 🗄️ database.sql       # File Backup Database
-
+```
 
 ## 👨‍💻 Tech Stack
 * **Backend:** PHP Native (Logic & CRUD), Python (AI Calculation).
