@@ -17,11 +17,11 @@ Coba aplikasi langsung di sini:
 
 | Input Form (Smart Estimate) | Analysis Result (Risk Score) |
 |:---------------------------:|:----------------------------:|
-| ![Input Form](screenshots/input_form.jpg) | ![Result](screenshots/result_page.jpg) |
+| ![Input Form](screenshots/input.png) | ![Result](screenshots/result.png) |
 
 | Admin Dashboard (CRUD) |
 |:----------------------:|
-| ![Dashboard](screenshots/dashboard.jpg) |
+| ![Dashboard](screenshots/history.png) |
 
 *(Catatan: Gambar di atas adalah preview dari folder screenshots/)*
 
